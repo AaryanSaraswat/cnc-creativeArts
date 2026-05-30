@@ -46,7 +46,7 @@ function Footer() {
               </li>
               <li>
                 <span className="icon">&#9742;</span>
-                +91 XXXX XXXX XX
+                +91 9868627702
               </li>
               <li>
                 <span className="icon">&#9873;</span>
