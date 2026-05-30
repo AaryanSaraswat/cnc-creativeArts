@@ -1,0 +1,181 @@
+/* Portfolio page hero - reuses shared pattern */
+.portfolio-page .page-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: url('/images/cnc-home2.png') center / cover no-repeat;
+  text-align: center;
+}
+
+.portfolio-page .page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.75);
+}
+
+.portfolio-page .page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-page .page-hero-content h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.portfolio-page .page-hero-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Filters */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 25px;
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-secondary);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Gallery Grid */
+.portfolio-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.portfolio-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  aspect-ratio: 0.85;
+}
+
+.portfolio-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 26, 46, 0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-gallery-item:hover .portfolio-gallery-overlay {
+  opacity: 1;
+}
+
+.portfolio-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-gallery-title {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.portfolio-gallery-cat {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 800px;
+  max-height: 90vh;
+  width: 100%;
+}
+
+.lightbox-content img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.lightbox-info {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.lightbox-info h4 {
+  color: var(--color-white);
+  margin-bottom: 5px;
+}
+
+.lightbox-info span {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 921px) {
+  .portfolio-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 544px) {
+  .portfolio-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-page .page-hero { padding: 140px 0 60px; }
+  .portfolio-page .page-hero-content h1 { font-size: 2rem; }
+}

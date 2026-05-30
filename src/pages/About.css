@@ -1,0 +1,113 @@
+.page-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: url('/images/CNC-Machine-196_ffff.jpg') center / cover no-repeat;
+  text-align: center;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.75);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-content h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.page-hero-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Content */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-main-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+}
+
+.about-main-text h6 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  font-family: var(--font-primary);
+}
+
+.about-main-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-main-text p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Values */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 40px 25px;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.value-card h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.value-card p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 921px) {
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 544px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero { padding: 140px 0 60px; }
+  .page-hero-content h1 { font-size: 2rem; }
+}
