@@ -52,7 +52,7 @@ function Contact() {
                   <div className="contact-icon">&#9742;</div>
                   <div>
                     <h6>PHONE</h6>
-                    <span>+91 XXXX XXXX XX</span>
+                    <span>+91 9868627702</span>
                   </div>
                 </div>
                 <div className="contact-detail-item">
