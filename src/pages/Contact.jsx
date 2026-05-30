@@ -59,7 +59,7 @@ function Contact() {
                   <div className="contact-icon">&#9873;</div>
                   <div>
                     <h6>LOCATION</h6>
-                    <span>India</span>
+                    <span>Plot no 5, near Metro pillar no 484, Swaran Park, Mundka, New Delhi, Delhi, 110041</span>
                   </div>
                 </div>
               </div>

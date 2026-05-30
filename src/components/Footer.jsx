@@ -50,7 +50,7 @@ function Footer() {
               </li>
               <li>
                 <span className="icon">&#9873;</span>
-                India
+                Plot no 5, near Metro pillar no 484, Swaran Park, Mundka, New Delhi, Delhi, 110041
               </li>
             </ul>
           </div>
